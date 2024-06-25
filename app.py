@@ -8,7 +8,7 @@ from tensorflow.keras.preprocessing.image import load_img, img_to_array
 
 app = Flask(__name__)
 
-# Google Drive file ID
+
 FILE_ID = '1vvnxauxIE5UdtsX-9ho_CX8EHU-8hDGA'
 LOCAL_MODEL_PATH = 'model.h5'
 
@@ -34,7 +34,8 @@ def getResult(image_path):
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('index.html')
+    return "Welcome to the Flask API"
+
 
 @app.route('/predict', methods=['GET', 'POST'])
 def upload():
